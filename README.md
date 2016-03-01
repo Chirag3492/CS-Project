@@ -1,7 +1,7 @@
 # HVMR
 A Database for a Research Inventory in the Hudson/Mohawk Watershed
 
-#Group Members: 
+##Group Members: 
 
 - Enrique Paz 
   - Front End
