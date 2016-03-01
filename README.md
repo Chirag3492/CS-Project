@@ -5,7 +5,8 @@ Group Members:
 
 - Enrique Paz 
   - Front End, PHP
-- Ethan Garrison 
+- Ethan Garrison
+  - Group Leader
   - MySQL
 - James Greene 
   - 
