@@ -22,16 +22,9 @@ A Database for a Research Inventory in the Hudson/Mohawk Watershed
 
 ###Requirements:
 
-- [Project Details](http://www.csis.pace.edu/~ctappert/it691-projects/hudson.htm)
-- Syllabus
-http://www.csis.pace.edu/~ctappert/it691-16spring/default.htm
-
-####Project Deliverables
-http://www.csis.pace.edu/~ctappert/it691-16spring/projdeliver.htm
-
-###Mockup
-https://moqups.com/ep91901n/aU6dbta3/
-
-###Slack
-https://hvmr.slack.com
+- CS 692 Computer Science II, [Project Details](http://www.csis.pace.edu/~ctappert/it691-projects/hudson.htm) for HVMR
+- [Syllabus](http://www.csis.pace.edu/~ctappert/it691-16spring/default.htm)
+- [Project Deliverables](http://www.csis.pace.edu/~ctappert/it691-16spring/projdeliver.htm)
+- We are using moqups to create our [Mockups](https://moqups.com/ep91901n/aU6dbta3/)
+- Regular communications through [Slack](https://hvmr.slack.com)
 
