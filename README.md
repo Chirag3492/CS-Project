@@ -7,4 +7,4 @@ Enrique Paz - Front End, PHP
 Ethan Garrison - MySQL
 James Greene - 
 Jose Gonzalez - PHP, MySQL
-Kin Zhao - Front End, PHP, MySQL
+Kin Zhao - Front End, PHP, MySQL 
