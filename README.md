@@ -18,13 +18,12 @@ A Database for a Research Inventory in the Hudson/Mohawk Watershed
   - Front End
   - PHP
   - MySQL 
-  - 
+
+
 ###Requirements:
 
 - [Project Details](http://www.csis.pace.edu/~ctappert/it691-projects/hudson.htm)
-
-
-####Syllabus
+- Syllabus
 http://www.csis.pace.edu/~ctappert/it691-16spring/default.htm
 
 ####Project Deliverables
