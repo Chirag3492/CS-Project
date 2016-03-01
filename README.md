@@ -21,8 +21,8 @@ A Database for a Research Inventory in the Hudson/Mohawk Watershed
   - 
 ###Requirements:
 
-####Project Details
-http://www.csis.pace.edu/~ctappert/it691-projects/hudson.htm
+- [Project Details](http://www.csis.pace.edu/~ctappert/it691-projects/hudson.htm/)
+
 
 ####Syllabus
 http://www.csis.pace.edu/~ctappert/it691-16spring/default.htm
