@@ -1,0 +1,179 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "compass/css3";
+
+$basecolor: #c5d5cb;
+$accentcolor: #00A445;
+$bkgcolor: #e3e0cf;
+$basefont: 'Hind', sans-serif;
+$max: 960px;
+
+body {
+	font-family:$basefont;
+	font-size:100%;
+	font-weight:400;
+	color:$accentcolor; 
+	background-color:$bkgcolor; 
+	}
+
+header {
+	padding:25px 2.5%;
+	text-align:center;
+	border-bottom:1px solid $accentcolor;
+	background-color:#fff;
+	margin-bottom:25px;
+	@include box-shadow(1px 3px 12px $accentcolor);
+}
+main {
+	max-width:$max;
+	width:90%;
+	margin:0 auto;
+}
+section {
+	display:flex;
+}
+footer {
+	border-top:1px solid $accentcolor;
+	margin-top:25px;
+	padding:25px 2.5%
+}
+nav {
+	min-width:200px;
+}
+li {
+	border-bottom:1px solid $accentcolor;
+}
+
+ul ul li {
+	padding:0 10%;
+}
+ul ul li a:hover {
+	background-color:transparent;
+	color:rgba(66,66,66,1.00);
+}
+a:link {
+	text-decoration:none;
+	font-size:120%;
+	color:$accentcolor;
+	display:inline-block;
+padding:15px 5%;
+
+}
+a:visited {
+	color:#ccc;
+}
+a:hover {
+	color:$basecolor;
+	background-color:$accentcolor;
+	display:block;
+padding:15px 5%;
+}
+
+h1 {
+	color:$accentcolor;
+	font-family:$basefont;
+	font-size:400%;
+	font-weight:700;
+}
+h2 {
+	color:$accentcolor;
+	font-weight:700;
+	font-size:200%;
+}
+aside {
+	min-width:200px;
+	flex:1;
+	background-color:#fff;
+	@include border-radius(25px);
+	margin-right:20px;
+	padding:25px 2.5%;
+}
+button {
+	padding:15px;
+	font-weight:700px;
+	background-color:#00A445;
+	@include border-radius(15px);
+	color:#fff;
+	font-size:150%;
+	border:1px solid $accentcolor;
+	@include transition(color 1s, background 1s);
+	@include box-shadow(1px 3px 8px $accentcolor);
+	margin:15px 0; 
+}
+button:hover, input[type="submit"]:hover {
+	background-color:$accentcolor;
+	color:$basecolor;
+	border:1px solid $basecolor;
+}
+.disabled, .disabled:hover{
+	background-color:rgba(175,175,175,1.00) !important;
+} 
+	
+input {   
+	display:block;
+	@include border-radius(15px);
+	margin:15px 0;
+	padding:15px;
+	border:1px solid $accentcolor;
+	width:300px;
+	font-size:150%;
+}
+input[type="submit"] {
+	padding:15px 30px;
+	font-weight:700px;
+	background-color:$bkgcolor;
+	@include border-radius(15px);
+	color:$accentcolor;
+	font-size:120%;
+	border:1px solid $accentcolor;
+	@include transition(color 1s, background 1s);
+	@include box-shadow(1px 3px 8px $accentcolor);
+	width:200px;
+}
+	
+select {
+	@include border-radius(15px);
+	margin:15px 0;
+	padding:15px;
+	border:1px solid $accentcolor;
+	width:330px;
+}
+option {
+	font-size:150%;
+}
+	
+.container {
+	max-width:$max;
+	width:90%;
+	margin:0 auto;
+	position:relative;
+}
+.content {
+	min-width:200px;
+	flex:3;
+	background-color:#fff;
+	@include border-radius(25px);
+	padding:25px 2.5%;
+}
+a.selected {
+	color:#fff;
+	background-color:$accentcolor;
+	display:block;
+	padding:15px 5%;
+}
+
+.err {color:red !important;font-weight:bold;padding:15px 0;display:block} 
+.empty {background-color:yellow;border:1px solid red;}
+@media screen and (max-width:480px){
+	
+	section {display:block}
+	section div, aside {width:90%;margin:0 auto 15px;}
+	button {position:relative;}
+	input, select, input[type="submit"] {width:90%;}
+	
+	
+}
