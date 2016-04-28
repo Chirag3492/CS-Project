@@ -1,9 +1,8 @@
 <?php
+
+include('includes/config.php');
 // Start the session
 session_start();
-
-//Open Connection
-$db = mysqli_connect('localhost','enriquep_admin','Cp121872*','enriquep_hvmr');
 
 //Test connection
 if(mysqli_connect_errno()){
@@ -62,7 +61,7 @@ if(!$result){
 					die("Database insert query failed.");
 				else
 					header('Location: register-success.php');
-				
+					exit();
 				
 			}else{
 				$usrmsg = 'User Exists';
@@ -161,11 +160,7 @@ function validateFld(){
     <section>
     	<aside>
             <nav>
-                <ul>
-                    <li><a href="index.php">Search</a></li>
-                    <li><a href="view-all.php">View All</a></li>
-                    <li><a href="reports.php">Reports</a></li>
-                 </ul>
+               <?php include 'includes/main-nav.php'; ?>
              </nav>
          </aside>
         <div class="content">
@@ -191,9 +186,7 @@ function validateFld(){
     </section>
 </main>
 <footer>
-<div class="container">
-<p>&copy;<?php echo date('Y'); ?> HVMR. All rights reserved.</p>
-</div>
+<?php include 'includes/footer.php' ?>
 </footer>
 
 </body>

@@ -1,5 +1,5 @@
 <?php 
-
+include('includes/session.php');
 ?>
 <html>
 <head>
@@ -27,11 +27,7 @@
     <section>
     	<aside>
             <nav>
-                <ul>
-                    <li><a href="#" class="selected">Search</a></li>
-                    <li><a href="view-all.php">View All</a></li>
-                    <li><a href="reports.php">Reports</a></li>
-                 </ul>
+               <?php include 'includes/main-nav.php'; ?>
              </nav>
          </aside>
         <div class="content">
@@ -41,9 +37,7 @@
     </section>
 </main>
 <footer>
-<div class="container">
-<p><?php echo date('Y')?> HVMR. All rights reserved.</p>
-</div>
+<?php include 'includes/footer.php' ?>
 </footer>
 </body>
 </html>

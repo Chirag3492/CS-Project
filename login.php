@@ -1,71 +1,40 @@
 <?php
-// Start the session
-session_start();
-
-//Open Connection
-//$db = mysqli_connect('localhost','root','root','hvmr');
-$db = mysqli_connect('localhost','enriquep_admin','Cp121872*','enriquep_hvmr');
-
-//Test connection
-if(mysqli_connect_errno()){
-	die("Database connection failed:" . mysqli_connect_error() . "(" . mysqli_connect_errno() . ")" );
-};
-
-
-if(isset($_POST['submit'])){
-	//Query exisiting user
-	$usr = 'SELECT email, password FROM register';
-	$result = mysqli_query($db, $usr);
-	
-	//Check Query
-	if(!$result){
-		die("Database query failed.");
-	}
-	
-	//Set variables
-	$email = $_POST['usrnm'];
-	$pswrd = $_POST['pswrd'];
-	$_SESSION["greet"] = $email;
-
-//Check username field
-
-	//Fetch rows
-	while($row = mysqli_fetch_assoc($result)){
-			//Check if user exists
-			if ($row['email'] == $email && $row['password'] == $pswrd){
-				$usrexist = true;
-			}else{ 
-				$usrexist = false;
-			}
-			
-	}//End while	
+  session_start();  
+  require 'includes/config.php';
+  
+   
+  if($_SERVER["REQUEST_METHOD"] == "POST")  {
+      // username and password sent from form 
+      
+      $username = $_POST['usrnm'];
+      $password = $_POST['pswrd']; 
+      
+      $sql = "SELECT userid FROM register WHERE email = '{$username}' and password = '{$password}'";
+      $result = mysqli_query($db,$sql);
+	  
+	  
+	  if(!$result){
+			die("Database query failed.");
+		}
 		
-			//release previous query
-		//	mysqli_free_result();
 		
-			if($usrexist == true){
-				
-				//Escape string characters before inserting
-				$email = mysqli_real_escape_string($db, $_POST['usrnm']);
-				$pswrd = mysqli_real_escape_string($db, $_POST['pswrd']);
-				
-				//Insert new user
-				$usrlog = "INSERT INTO login (email, password) VALUES ('$email','$pswrd')";
-				$result = mysqli_query($db, $usrlog);
-				
-				//Check Query
-				if(!$result)
-					die("Database insert query failed.");
-				else
-					header('Location: admin.php');
-				
-				
-			}else{
-				$usrmsg = 'Username/password not found.';
-			}
-				
-}//End if
-
+      $row = mysqli_fetch_assoc($result);
+	  
+    //  $active = $row['active'];
+      
+      $count = mysqli_num_rows($result);
+      
+      // If result matched $myusername and $mypassword, table row must be 1 row
+		
+      if($count == 1) {
+     //   session_register("username");
+       	$_SESSION['login_user'] = $username;
+        header("location: admin/index.php");
+		
+      }else {
+         $error = "Your Login Name or Password is invalid";
+      }
+   }
 ?>
 <html>
 <head>
@@ -147,6 +116,7 @@ function validateFld(){
 	
 
 </script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 </head>
 
 <body>
@@ -161,16 +131,12 @@ function validateFld(){
     <section>
     	<aside>
             <nav>
-                <ul>
-                    <li><a href="index.php">Search</a></li>
-                    <li><a href="view-all.php">View All</a></li>
-                    <li><a href="reports.php">Reports</a></li>
-                 </ul>
+                 <?php include 'includes/main-nav.php'; ?>
              </nav>
          </aside>
         <div class="content">
         	<h2>Log-in</h2>
-            <span><?php echo $usrmsg ?></span>
+            <span><?php echo $error ?></span>
             <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method="post">
               	<input type="text" name="usrnm" id="usrnm" placeholder="username" onKeyUp="validateFld()"  onKeyPress="usrName(this.value)" autofocus autocomplete="off">
                 <span id="usrmsg"></span>
@@ -182,9 +148,7 @@ function validateFld(){
     </section>
 </main>
 <footer>
-<div class="container">
-<p>&copy;<?php echo date('Y'); ?> HVMR. All rights reserved.</p>
-</div>
+<?php include 'includes/footer.php' ?>
 </footer>
 
 </body>

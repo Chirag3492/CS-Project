@@ -1,5 +1,5 @@
-<?php
-
+<?php 
+require 'includes/config.php';
 ?>
 <html>
 <head>
@@ -28,17 +28,8 @@
     <section>
     	<aside>
             <nav>
-                <ul>
-                    <li><a href="index.php">Search</a></li>
-                    <li><a href="view-all.php">View All</a></li>
-                    <li><a href="edit.php" >Edit</a>
-                    
-      
-                    
-                    
-                    </li>
-                    <li><a href="#" class="selected">Reports</a></li>
-                 </ul>
+                
+                <?php include 'includes/main-nav.php'; ?>
                  
              </nav>
          </aside>
@@ -49,9 +40,7 @@
     </section>
 </main>
 <footer>
-<div class="container">
-<p>&copy;<?php echo date('Y')?> HVMR. All rights reserved.</p>
-</div>
+<?php include 'includes/footer.php' ?>
 </footer>
 </body>
 </html>

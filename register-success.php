@@ -23,11 +23,7 @@ session_start();
     <section>
     	<aside>
             <nav>
-                <ul>
-                    <li><a href="index.php">Search</a></li>
-                    <li><a href="view-all.php">View All</a></li>
-                    <li><a href="reports.php">Reports</a></li>
-                 </ul>
+                 <?php include 'includes/main-nav.php'; ?>
              </nav>
          </aside>
         <div class="content">
@@ -38,7 +34,7 @@ session_start();
 </main>
 <footer>
 <div class="container">
-<p>&copy;<?php echo date('Y')?> HVMR. All rights reserved.</p>
+<?php include 'includes/footer.php' ?>
 </div>
 </footer>
 

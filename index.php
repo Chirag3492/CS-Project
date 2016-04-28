@@ -1,5 +1,5 @@
-<?php
-
+<?php 
+require 'includes/config.php';
 ?>
 <html>
 <head>
@@ -18,7 +18,21 @@
         <p>A Database for a Research Inventory in the Hudson/Mohawk Watershed</p>
         </div>
         <div style="flex:1;min-width:200px">
-        <button type="button" onClick="window.open('login.php','_self')">Log-in</button>
+        
+        
+         <?php 
+		
+		if(!isset($_SESSION['login_user'])) { ?>
+
+		<button type="button" onClick="window.open('login.php','_self')">Log-in</button>
+        
+		
+		<?php }else{ ?>
+        
+        
+        <button type="submit" onClick="window.open('logout.php','_self')">Log-out</button>
+        
+        <?php } ?>
         <button type="button" onClick="window.open('register.php','_self')">Register</button>
     </div>
     </section>
@@ -27,11 +41,7 @@
     <section>
     	<aside>
             <nav>
-                <ul>
-                    <li><a href="#" class="selected">Search</a></li>
-                    <li><a href="view-all.php">View All</a></li>
-                    <li><a href="reports.php">Reports</a></li>
-                 </ul>
+                 <?php include 'includes/main-nav.php'; ?>
              </nav>
          </aside>
         <div class="content">
@@ -66,9 +76,7 @@
     </section>
 </main>
 <footer>
-<div class="container">
-<p>&copy;<?php echo date('Y')?> HVMR. All rights reserved.</p>
-</div>
+<?php include 'includes/footer.php' ?>
 </footer>
 </body>
 </html>
