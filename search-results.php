@@ -1,5 +1,5 @@
 <?php 
-include('includes/session.php');
+require 'includes/config.php';
 ?>
 <html>
 <head>
@@ -32,6 +32,44 @@ include('includes/session.php');
          </aside>
         <div class="content">
         	<h2>Results:</h2>
+<?php            
+//Test connection
+if(mysqli_connect_errno()){
+	die("Database connection failed:" . mysqli_connect_error() . "(" . mysqli_connect_errno() . ")" );
+};
+
+if(isset($_POST['submit'])){
+//Set variables
+$qryCat = mysql_real_escape_string($_POST['criteria']);
+$qrySearch = mysql_real_escape_string($_POST['search']);	
+	
+//Query users choice
+$sql = 'SELECT * FROM reports';
+$result = mysqli_query($db, $sql);
+
+//Check Query
+if(!$result){
+	die("Database query failed.");
+}
+
+while($row = mysqli_fetch_assoc($result)){
+
+	if($row[$qryCat] == $qrySearch){
+	
+		echo '<h3>'.$row[$qryCat].'</h3>';
+		echo '<h3>'.$row['project_title'].'</h3>';
+		echo '<p>'.$row['project_desc'].'</p>';
+		echo '<a href="'.$row['paper_url'].'">'.$row['paper_url'].'</a>';
+		echo '<hr>';
+	}
+	
+
+
+}
+	
+
+}
+?>
            <button onClick="window.open('index.php','_self')">New Search</button>
         </div>
     </section>

@@ -1,5 +1,7 @@
 <?php 
+session_start();
 require 'includes/config.php';
+
 ?>
 <html>
 <head>
@@ -46,31 +48,31 @@ require 'includes/config.php';
          </aside>
         <div class="content">
         	<h2>Select search criteria</h2>
-            <form action="">
+            <form action="search-results.php" method="post">
                 <select name="criteria" id="">
                 <option value=""></option>
                 
-                    <option value="catname">Category Name</option>
+                    <option value="category">Category Name</option>
                     <option value="comments">Comments</option>
                     <option value="citation">Complete cittation of paper</option>
                     <option value="department">Department</option>
-                    <option value="description">Description</option>
+                    <option value="proj_desc">Description</option>
                     <option value="email">Email</option>
-                    <option value="emailinternal">Email address for internal paper contact</option>
+                    <option value="paper_email">Email address for internal paper contact</option>
                     <option value="institution">Institution</option>
-                    <option value="internalpaper">Internal Paper</option>
+                    <option value="internal_paper">Internal Paper</option>
                     <option value="name">Name</option>
-                    <option value="contactname">Name of contact for internal paper</option>
+                    <option value="paper_contact">Name of contact for internal paper</option>
                     <option value="poster">Poster</option>
                     <option value="published">Published</option>
-                    <option value="stateCounty">State, County</option>
-                    <option value="title">Title of Resarch or Project</option>
-                    <option value="url">URL of paper</option>
-                    <option value="urlpost">URL of Poster</option>
-                    <option value="year">Year</option>
+                    <option value="proj_loc">State, County</option>
+                    <option value="project_title">Title of Resarch or Project</option>
+                    <option value="project_url">URL of paper</option>
+                    <option value="poster_url">URL of Poster</option>
+                    
                 </select>
-                <input type="text" placeholder="search">
-                <input type="submit" value="Submit">
+                <input name="search" type="text" placeholder="search">
+                <input name="submit" type="submit" value="Submit">
             </form>
         </div>
     </section>

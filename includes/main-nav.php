@@ -10,8 +10,7 @@
                  echo   '<li><a href="admin/edit.php" >Edit</a>
                     </li>';
 					}
-            echo '<li><a href="#">Reports</a></li>
-                 </ul>';
+         
 				 
 				 
 				 ?>

@@ -11,6 +11,7 @@ $accentcolor: #00A445;
 $bkgcolor: #e3e0cf;
 $basefont: 'Hind', sans-serif;
 $max: 960px;
+$btncolor: steelblue;
 
 body {
 	font-family:$basefont;
@@ -84,6 +85,14 @@ h2 {
 	font-weight:700;
 	font-size:200%;
 }
+h3 {
+	color:$btncolor;
+	font-weight:700;
+	font-size:150%;
+}
+p {
+	margin:10px;
+}
 aside {
 	min-width:200px;
 	flex:1;
@@ -95,7 +104,7 @@ aside {
 button {
 	padding:15px;
 	font-weight:700px;
-	background-color:#00A445;
+	background-color:$btncolor;
 	@include border-radius(15px);
 	color:#fff;
 	font-size:150%;

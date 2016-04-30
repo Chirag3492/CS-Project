@@ -1,4 +1,4 @@
-<?php 
+<?php
 require '../includes/session.php';
 ?>
 
@@ -21,7 +21,7 @@ require '../includes/session.php';
 		if(isset($_SESSION['login_user'])) { ?>
 
 
-        <button type="submit" onClick="window.open('../index.php','_self')">Log-out</button>
+        <button type="submit" onClick="window.open('../logout.php','_self')">Log-out</button>
 		
 		<?php } ?>
     </div>
