@@ -18,7 +18,14 @@ require 'includes/config.php';
         <p>A Database for a Research Inventory in the Hudson/Mohawk Watershed</p>
         </div>
         <div style="flex:1;min-width:200px">
+     <?php   if(isset($_SESSION['login_user'])) { ?>
+     
+           <button type="submit" onClick="window.open('logout.php','_self')">Log-out</button>
+     
+     <?php }else{ ?>
         <button type="submit" onClick="window.open('login.php','_self')">Log-in</button>
+        
+        <?php } ?>
         <button type="submit" onClick="window.open('register.php','_self')">Register</button>
     </div>
     </section>
@@ -54,7 +61,7 @@ if(!$result){
 
 while($row = mysqli_fetch_assoc($result)){
 
-	if($row[$qryCat] == $qrySearch){
+	if($row[$qryCat]){
 	
 		echo '<h3>'.$row[$qryCat].'</h3>';
 		echo '<h3>'.$row['project_title'].'</h3>';

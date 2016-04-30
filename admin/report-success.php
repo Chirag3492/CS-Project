@@ -1,10 +1,11 @@
 <?php
 require '../includes/session.php';
 ?>
-
-<html>
+<!doctype html>
+<html lang='en'>
 <head>
-<title>HVMR</title>
+<meta charset="utf-8">
+<title>HVMR | Add Report Success</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="https://fonts.googleapis.com/css?family=Hind:400,300,700" rel="stylesheet" type="text/css">
 <link href="../stylesheets/screen.css" rel="stylesheet" type="text/css">
@@ -12,18 +13,12 @@ require '../includes/session.php';
 
 <body>
 <header>
-
-    <div class="container">
+<div class="container">
         <h1>HVMR</h1>
         <p>A Database for a Research Inventory in the Hudson/Mohawk Watershed</p>
-        <?php 
-		
-		if(isset($_SESSION['login_user'])) { ?>
-
-
+ 
         <button type="submit" onClick="window.open('../logout.php','_self')">Log-out</button>
-		
-		<?php } ?>
+
     </div>
 </header>
 <main>
@@ -33,10 +28,10 @@ require '../includes/session.php';
                 <ul>
                     <li><a href="../index.php">Search</a></li>
                     <li><a href="../view-all.php">View All</a></li>
-                    <li><a href="#" class="selected">Edit</a>
+                    <li><a href="edit.php" class="selected">Edit</a>
                     
                     <ul>
-                    <li><a href="add-report.php">Add Report</a></li>
+                    <li><a href="#" >Add Report</a></li>
                     <li><a href="#">Update Report</a></li>
                     <li><a href="#">Delete Report</a></li>
                  </ul>
@@ -49,10 +44,12 @@ require '../includes/session.php';
                  
              </nav>
          </aside>
-        <div class="content">
+                 <div class="content">
         	<h2>Logged in as: <?php echo $_SESSION['login_user'] ?></h2>
-            <h3>HVMR Admin</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi reiciendis vero possimus officia commodi impedit porro id praesentium dolores! Necessitatibus, aliquid, iste, possimus deleniti assumenda animi alias eum recusandae voluptatibus esse amet sit inventore laborum cupiditate adipisci dolor excepturi ullam officia delectus sapiente laboriosam aspernatur labore modi omnis asperiores error dignissimos cumque iure vel mollitia sunt eos incidunt at sint suscipit nulla quo sed. Reiciendis, corrupti, hic, magnam ducimus tenetur aut dolor voluptates autem sit veniam quas eos vitae mollitia soluta temporibus nulla quo sunt voluptas? Neque, ab, sed delectus in reprehenderit quod quidem sapiente maxime excepturi labore? Aspernatur, ea.</p>
+            
+            <h3>Report added</h3>
+            
+            </form>
         </div>
     </section>
 </main>

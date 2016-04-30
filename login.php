@@ -19,15 +19,17 @@
 		
 		
       $row = mysqli_fetch_assoc($result);
-	  
-    //  $active = $row['active'];
       
       $count = mysqli_num_rows($result);
       
       // If result matched $username and $password, table row must be 1 row
 		
       if($count == 1) {
-     //   session_register("username");
+				
+	 if(!$result){
+			die("Database query failed.");
+		}
+	
        	$_SESSION['login_user'] = $username;
         header("location: admin/index.php");
 		

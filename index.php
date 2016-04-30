@@ -56,7 +56,6 @@ require 'includes/config.php';
                     <option value="comments">Comments</option>
                     <option value="citation">Complete cittation of paper</option>
                     <option value="department">Department</option>
-                    <option value="proj_desc">Description</option>
                     <option value="email">Email</option>
                     <option value="paper_email">Email address for internal paper contact</option>
                     <option value="institution">Institution</option>
@@ -65,13 +64,13 @@ require 'includes/config.php';
                     <option value="paper_contact">Name of contact for internal paper</option>
                     <option value="poster">Poster</option>
                     <option value="published">Published</option>
-                    <option value="proj_loc">State, County</option>
+                    <option value="project_loc">State or County</option>
                     <option value="project_title">Title of Resarch or Project</option>
                     <option value="project_url">URL of paper</option>
                     <option value="poster_url">URL of Poster</option>
                     
                 </select>
-                <input name="search" type="text" placeholder="search">
+                
                 <input name="submit" type="submit" value="Submit">
             </form>
         </div>

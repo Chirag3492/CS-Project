@@ -223,6 +223,26 @@ button:hover, input[type="submit"]:hover {
 }
 
 /* line 125, ../sass/screen.scss */
+form#add input {
+  display: block;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  border-radius: 15px;
+  margin: 15px 0;
+  padding: 15px;
+  border: 1px solid #00A445;
+  width: 90% !important;
+  font-size: 150%;
+}
+
+/* line 136, ../sass/screen.scss */
+form#add textarea {
+  width: 95%;
+  min-height: 100px;
+  font-size: 150%;
+}
+
+/* line 142, ../sass/screen.scss */
 input {
   display: block;
   -moz-border-radius: 15px;
@@ -235,7 +255,7 @@ input {
   font-size: 150%;
 }
 
-/* line 134, ../sass/screen.scss */
+/* line 151, ../sass/screen.scss */
 input[type="submit"] {
   padding: 15px 30px;
   font-weight: 700px;
@@ -256,7 +276,7 @@ input[type="submit"] {
   width: 200px;
 }
 
-/* line 147, ../sass/screen.scss */
+/* line 164, ../sass/screen.scss */
 select {
   -moz-border-radius: 15px;
   -webkit-border-radius: 15px;
@@ -267,12 +287,12 @@ select {
   width: 330px;
 }
 
-/* line 154, ../sass/screen.scss */
+/* line 171, ../sass/screen.scss */
 option {
   font-size: 150%;
 }
 
-/* line 158, ../sass/screen.scss */
+/* line 175, ../sass/screen.scss */
 .container {
   max-width: 960px;
   width: 90%;
@@ -280,7 +300,7 @@ option {
   position: relative;
 }
 
-/* line 164, ../sass/screen.scss */
+/* line 181, ../sass/screen.scss */
 .content {
   min-width: 200px;
   flex: 3;
@@ -291,7 +311,7 @@ option {
   padding: 25px 2.5%;
 }
 
-/* line 171, ../sass/screen.scss */
+/* line 188, ../sass/screen.scss */
 a.selected {
   color: #fff;
   background-color: #00A445;
@@ -299,7 +319,7 @@ a.selected {
   padding: 15px 5%;
 }
 
-/* line 178, ../sass/screen.scss */
+/* line 195, ../sass/screen.scss */
 .err {
   color: red !important;
   font-weight: bold;
@@ -307,30 +327,30 @@ a.selected {
   display: block;
 }
 
-/* line 179, ../sass/screen.scss */
+/* line 196, ../sass/screen.scss */
 .empty {
   background-color: yellow;
   border: 1px solid red;
 }
 
 @media screen and (max-width: 480px) {
-  /* line 182, ../sass/screen.scss */
+  /* line 199, ../sass/screen.scss */
   section {
     display: block;
   }
 
-  /* line 183, ../sass/screen.scss */
+  /* line 200, ../sass/screen.scss */
   section div, aside {
     width: 90%;
     margin: 0 auto 15px;
   }
 
-  /* line 184, ../sass/screen.scss */
+  /* line 201, ../sass/screen.scss */
   button {
     position: relative;
   }
 
-  /* line 185, ../sass/screen.scss */
+  /* line 202, ../sass/screen.scss */
   input, select, input[type="submit"] {
     width: 90%;
   }

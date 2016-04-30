@@ -60,9 +60,9 @@ require 'includes/config.php';
 	while($row = mysqli_fetch_assoc($result)){
 		
 		echo '<h3>'.$row['project_title'] . '</h3>';
-		echo '<p style="font-weight:bold">'.$row['name'].'</p>';
+		echo '<p style="font-weight:bold"> Author: '.$row['name'].'</p>';
 		echo '<p>'.$row['project_desc'] . '</p>';
-		echo '<a href="'.$row['paper_url'].'">'.$row['paper_url'].'</a>';
+		echo 'URL: <a href="'.$row['paper_url'].'">'.$row['paper_url'].'</a>';
 		echo '<hr>';
 			
 	}//End while
