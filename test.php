@@ -16,16 +16,14 @@ $qryChoice = 'category';
 $qrySearch = 'biology';	
 	
 //Query users choice
-$sql = 'SELECT'. mysql_real_escape_string($qryChoice).' FROM reports';
-$result = mysqli_query($db, $sql);
+$sql = "UPDATE reports SET project_title='Test' WHERE id=5";
 
-//Check Query
-if(!$result){
-	die("Database query failed.");
+if (mysqli_query($db, $sql)) {
+    echo "Record updated successfully";
+} else {
+    echo "Error updating record: " . mysqli_error($conn);
 }
 
-$row = mysqli_fetch_assoc($result);
 
-var_dump($row);
 
 //}

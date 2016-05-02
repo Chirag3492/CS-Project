@@ -65,7 +65,7 @@ padding:15px 5%;
 
 }
 a:visited {
-	color:#ccc;
+	color:$accentcolor;
 }
 a:hover {
 	color:$basecolor;
@@ -89,6 +89,7 @@ h3 {
 	color:$btncolor;
 	font-weight:700;
 	font-size:150%;
+	margin:10px 0;
 }
 p {
 	margin:10px;
@@ -112,6 +113,7 @@ button {
 	@include transition(color 1s, background 1s);
 	@include box-shadow(1px 3px 8px $accentcolor);
 	margin:15px 0; 
+	cursor:pointer;
 }
 button:hover, input[type="submit"]:hover {
 	background-color:$accentcolor;
@@ -159,6 +161,7 @@ input[type="submit"] {
 	@include transition(color 1s, background 1s);
 	@include box-shadow(1px 3px 8px $accentcolor);
 	width:200px;
+	cursor:pointer;
 }
 	
 select {
@@ -194,6 +197,8 @@ a.selected {
 
 .err {color:red !important;font-weight:bold;padding:15px 0;display:block} 
 .empty {background-color:yellow;border:1px solid red;}
+
+strong {font-weight:bold;}
 @media screen and (max-width:480px){
 	
 	section {display:block}

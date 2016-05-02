@@ -60,10 +60,10 @@ require 'includes/config.php';
 	while($row = mysqli_fetch_assoc($result)){
 		
 		echo '<h3>'.$row['project_title'] . '</h3>';
-		echo '<p style="font-weight:bold"> Author: '.$row['name'].'</p>';
+		echo '<hr><p style="font-weight:bold"> Author: '.$row['name'].'</p>';
 		echo '<p>'.$row['project_desc'] . '</p>';
 		echo 'URL: <a href="'.$row['paper_url'].'">'.$row['paper_url'].'</a>';
-		echo '<hr>';
+	
 			
 	}//End while
 		  
@@ -81,3 +81,6 @@ require 'includes/config.php';
 </footer>
 </body>
 </html>
+<?php
+mysqli_close($db);
+?>

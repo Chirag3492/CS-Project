@@ -139,7 +139,7 @@ a:link {
 
 /* line 67, ../sass/screen.scss */
 a:visited {
-  color: #ccc;
+  color: #00A445;
 }
 
 /* line 70, ../sass/screen.scss */
@@ -170,14 +170,15 @@ h3 {
   color: steelblue;
   font-weight: 700;
   font-size: 150%;
+  margin: 10px 0;
 }
 
-/* line 93, ../sass/screen.scss */
+/* line 94, ../sass/screen.scss */
 p {
   margin: 10px;
 }
 
-/* line 96, ../sass/screen.scss */
+/* line 97, ../sass/screen.scss */
 aside {
   min-width: 200px;
   flex: 1;
@@ -189,7 +190,7 @@ aside {
   padding: 25px 2.5%;
 }
 
-/* line 104, ../sass/screen.scss */
+/* line 105, ../sass/screen.scss */
 button {
   padding: 15px;
   font-weight: 700px;
@@ -208,21 +209,22 @@ button {
   -webkit-box-shadow: 1px 3px 8px #00A445;
   box-shadow: 1px 3px 8px #00A445;
   margin: 15px 0;
+  cursor: pointer;
 }
 
-/* line 116, ../sass/screen.scss */
+/* line 118, ../sass/screen.scss */
 button:hover, input[type="submit"]:hover {
   background-color: #00A445;
   color: #c5d5cb;
   border: 1px solid #c5d5cb;
 }
 
-/* line 121, ../sass/screen.scss */
+/* line 123, ../sass/screen.scss */
 .disabled, .disabled:hover {
   background-color: #afafaf !important;
 }
 
-/* line 125, ../sass/screen.scss */
+/* line 127, ../sass/screen.scss */
 form#add input {
   display: block;
   -moz-border-radius: 15px;
@@ -235,14 +237,14 @@ form#add input {
   font-size: 150%;
 }
 
-/* line 136, ../sass/screen.scss */
+/* line 138, ../sass/screen.scss */
 form#add textarea {
   width: 95%;
   min-height: 100px;
   font-size: 150%;
 }
 
-/* line 142, ../sass/screen.scss */
+/* line 144, ../sass/screen.scss */
 input {
   display: block;
   -moz-border-radius: 15px;
@@ -255,7 +257,7 @@ input {
   font-size: 150%;
 }
 
-/* line 151, ../sass/screen.scss */
+/* line 153, ../sass/screen.scss */
 input[type="submit"] {
   padding: 15px 30px;
   font-weight: 700px;
@@ -274,9 +276,10 @@ input[type="submit"] {
   -webkit-box-shadow: 1px 3px 8px #00A445;
   box-shadow: 1px 3px 8px #00A445;
   width: 200px;
+  cursor: pointer;
 }
 
-/* line 164, ../sass/screen.scss */
+/* line 167, ../sass/screen.scss */
 select {
   -moz-border-radius: 15px;
   -webkit-border-radius: 15px;
@@ -287,12 +290,12 @@ select {
   width: 330px;
 }
 
-/* line 171, ../sass/screen.scss */
+/* line 174, ../sass/screen.scss */
 option {
   font-size: 150%;
 }
 
-/* line 175, ../sass/screen.scss */
+/* line 178, ../sass/screen.scss */
 .container {
   max-width: 960px;
   width: 90%;
@@ -300,7 +303,7 @@ option {
   position: relative;
 }
 
-/* line 181, ../sass/screen.scss */
+/* line 184, ../sass/screen.scss */
 .content {
   min-width: 200px;
   flex: 3;
@@ -311,7 +314,7 @@ option {
   padding: 25px 2.5%;
 }
 
-/* line 188, ../sass/screen.scss */
+/* line 191, ../sass/screen.scss */
 a.selected {
   color: #fff;
   background-color: #00A445;
@@ -319,7 +322,7 @@ a.selected {
   padding: 15px 5%;
 }
 
-/* line 195, ../sass/screen.scss */
+/* line 198, ../sass/screen.scss */
 .err {
   color: red !important;
   font-weight: bold;
@@ -327,30 +330,35 @@ a.selected {
   display: block;
 }
 
-/* line 196, ../sass/screen.scss */
+/* line 199, ../sass/screen.scss */
 .empty {
   background-color: yellow;
   border: 1px solid red;
 }
 
+/* line 201, ../sass/screen.scss */
+strong {
+  font-weight: bold;
+}
+
 @media screen and (max-width: 480px) {
-  /* line 199, ../sass/screen.scss */
+  /* line 204, ../sass/screen.scss */
   section {
     display: block;
   }
 
-  /* line 200, ../sass/screen.scss */
+  /* line 205, ../sass/screen.scss */
   section div, aside {
     width: 90%;
     margin: 0 auto 15px;
   }
 
-  /* line 201, ../sass/screen.scss */
+  /* line 206, ../sass/screen.scss */
   button {
     position: relative;
   }
 
-  /* line 202, ../sass/screen.scss */
+  /* line 207, ../sass/screen.scss */
   input, select, input[type="submit"] {
     width: 90%;
   }

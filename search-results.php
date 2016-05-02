@@ -45,38 +45,49 @@ if(mysqli_connect_errno()){
 	die("Database connection failed:" . mysqli_connect_error() . "(" . mysqli_connect_errno() . ")" );
 };
 
-if(isset($_POST['submit'])){
+if(isset($_POST['submit']) && !empty($_POST['criteria'])){
 //Set variables
-$qryCat = mysql_real_escape_string($_POST['criteria']);
+$qryCat = $_POST['criteria'];
 $qrySearch = mysql_real_escape_string($_POST['search']);	
+
 	
-//Query users choice
-$sql = 'SELECT * FROM reports';
-$result = mysqli_query($db, $sql);
-
-//Check Query
-if(!$result){
-	die("Database query failed.");
-}
-
-while($row = mysqli_fetch_assoc($result)){
-
-	if($row[$qryCat]){
+	//Query users choice
+	$sql = "SELECT * FROM `reports` WHERE `$qryCat` = '$qrySearch' OR `$qryCat` LIKE '%$qrySearch%'";
+	$result = mysqli_query($db, $sql);
 	
-		echo '<h3>'.$row[$qryCat].'</h3>';
-		echo '<h3>'.$row['project_title'].'</h3>';
-		echo '<p>'.$row['project_desc'].'</p>';
-		echo '<a href="'.$row['paper_url'].'">'.$row['paper_url'].'</a>';
-		echo '<hr>';
+
+		//Check Query
+		if(!$result){
+			die("Database query failed.");
+		}
+		
+	$row = mysqli_fetch_assoc($result);
+	
+	//Check how many records
+	$count = mysqli_num_rows($result);
+
+	echo '<h3> Search Criteria:'.' '.$row[$qryCat].'</h3>';
+	
+	//Loop through records and display	
+	while($row = mysqli_fetch_assoc($result)){
+			
+			echo '<h3>'.$row['project_title'].'</h3>';
+			echo '<hr><p>'.$row['project_desc'].'</p>';
+			echo '<a href="'.$row['paper_url'].'">'.$row['paper_url'].'</a>';
+			
 	}
+
+		//If no records are found alert user
+		if($count==0){
+			$err = "No records match";
+		}
+
+}else{
+	$err = "You must select a criteria or view all";
 	
-
-
-}
-	
-
-}
+}//IF POST ENDS
 ?>
+	<h3><?php echo $err ?></h3>
            <button onClick="window.open('index.php','_self')">New Search</button>
         </div>
     </section>
@@ -86,3 +97,6 @@ while($row = mysqli_fetch_assoc($result)){
 </footer>
 </body>
 </html>
+<?php
+mysqli_close($db);
+?>

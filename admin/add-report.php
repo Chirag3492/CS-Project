@@ -26,6 +26,7 @@ $paper = $_POST['internal_paper'];
 $papercon = $_POST['paper_contact'];
 $paperemail = $_POST['paper_email'];
 $com = $_POST['comments'];
+$_SESSION["report"] = $title;
 	
 				
 				//Escape string characters before inserting
@@ -90,18 +91,18 @@ $com = $_POST['comments'];
                 <ul>
                     <li><a href="../index.php">Search</a></li>
                     <li><a href="../view-all.php">View All</a></li>
-                    <li><a href="edit.php" class="selected">Edit</a>
+                    <li><a href="edit.php" class="selected">Edit <strong>&gt;</strong></a>
                     
                     <ul>
-                    <li><a href="#" >Add Report</a></li>
-                    <li><a href="#">Update Report</a></li>
-                    <li><a href="#">Delete Report</a></li>
+                    <li><a href="add-report.php" >Add Report <strong>&gt;</strong></a></li>
+                    <li><a href="update.php">Update Report</a></li>
+                    <li><a href="delete.php">Delete Report</a></li>
                  </ul>
                     
                     
                     
                     </li>
-                    <li><a href="#">Reports</a></li>
+               
                  </ul>
                  
              </nav>
@@ -139,3 +140,6 @@ $com = $_POST['comments'];
 </footer>
 </body>
 </html>
+<?php
+mysqli_close($db);
+?>

@@ -26,7 +26,7 @@ require '../includes/session.php';
                     <li><a href="../index.php">Search</a></li>
                     <li><a href="../view-all.php">View All</a></li>
                     <li><a href="edit.php">Edit</a></li>
-                    <li><a href="../reports.php">Reports</a></li>
+                    
                  </ul>
                  
              </nav>
