@@ -24,6 +24,7 @@ A Database for a Research Inventory in the Hudson/Mohawk Watershed
 
 ## Current Website
 * **Version 1:** http://webpage.pace.edu/ep91901n/hvmr/
+* **Version 2:** http://hvmr.enriquepaz.com
 
 ##Requirements
 
