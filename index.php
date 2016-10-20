@@ -68,7 +68,7 @@ require 'includes/config.php';
                     <option value="published">Published</option>
                     <option value="project_loc">State or County</option>
                     <option value="project_title">Title of Resarch or Project</option>
-                    <option value="project_url">URL of paper</option>
+                    <option value="project_url">URL of Paper</option>
                     <option value="poster_url">URL of Poster</option>
                     
                 </select>
