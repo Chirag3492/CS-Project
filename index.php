@@ -61,7 +61,8 @@ require 'includes/config.php';
                     <option value="paper_email">Email address for internal paper contact</option>
                     <option value="institution">Institution</option>
                     <option value="internal_paper">Internal Paper</option>
-                    <option value="name">Name</option>
+                    <option value="first name">First Name</option>
+		    <option value="last name">Last Name</option>
                     <option value="paper_contact">Name of contact for internal paper</option>
                     <option value="poster">Poster</option>
                     <option value="published">Published</option>
