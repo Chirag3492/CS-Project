@@ -51,7 +51,7 @@ require 'includes/config.php';
         	<h2 style="margin-top:20px;">Select search criteria</h2>
             <form action="search-results.php" method="post">
                 <select name="criteria">
-                <option value=""></option>
+                <input type="text" name="select a field" placeholder="Select a field">
                 
                     		<option value="selectField"> Select a field</option>
                     <option value="institution">Institution</option>
