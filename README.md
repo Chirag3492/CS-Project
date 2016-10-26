@@ -3,28 +3,24 @@ A Database for a Research Inventory in the Hudson/Mohawk Watershed
 
 ###Group Members: 
 
-- Enrique Paz 
+- Chirag Shah 
   - Front End
   - PHP
-- Ethan Garrison
+- Abdellah Chemrah
   - Group Leader
-  - MySQL
-- James Greene 
-  - 
-- Jose Gonzalez 
-  - PHP
-  - MySQL
-- Kin Zhao 
   - Front End
-  - PHP
-  - MySQL 
+- Kishan Patel 
+  - MySQL
+- Yashwant Chakka 
+  - 
+  -
+   
 
 # HVMR
 A Database for a Research Inventory in the Hudson/Mohawk Watershed
 
 ## Current Website
-* **Version 1:** http://webpage.pace.edu/ep91901n/hvmr/
-* **Version 2:** http://hvmr.enriquepaz.com
+* **Version 1:** http://hvmr.enriquepaz.com
 
 ##Requirements
 
