@@ -50,7 +50,7 @@ require 'includes/config.php';
         <p style="line-height:150%;">The mission of the Environmental Consortium of Colleges & Universities is to harness higher education’s intellectual and physical resources to advance regional, ecosystem-based environmental research, teaching, and learning with a special emphasis on the greater Hudson-Mohawk River watershed.</p>
         	<h2 style="margin-top:20px;">Select search criteria</h2>
             <form action="search-results.php" method="post">
-                <select name="criteria" placeholder="Select a field">
+                <select name="criteria">
                 
                 
                     <option value="selectField"> Select a field</option>
@@ -71,7 +71,7 @@ require 'includes/config.php';
                     <option value="comment">Comments</option>
                     
                 </select>
-                <input type="text" name="search" placeholder="search query">
+                <input type="text" name="search"> <button name="search" type="submit">search query</button>
                 <button name="submit" type="submit">submit</button>
             </form>
         </div>
