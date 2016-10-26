@@ -53,23 +53,22 @@ require 'includes/config.php';
                 <select name="criteria">
                 <option value=""></option>
                 
-                    <option value="category">Category Name</option>
-                    <option value="comments">Comments</option>
-                    <option value="citation">Complete cittation of paper</option>
-                    <option value="department">Department</option>
-                    <option value="email">Email</option>
-                    <option value="paper_email">Email address for internal paper contact</option>
+                    		<option value="selectField"> Select a field</option>
                     <option value="institution">Institution</option>
-                    <option value="internal_paper">Internal Paper</option>
-                    <option value="first name">First Name</option>
-		    <option value="last name">Last Name</option>
-                    <option value="paper_contact">Name of contact for internal paper</option>
-                    <option value="poster">Poster</option>
-                    <option value="published">Published</option>
-                    <option value="project_loc">State or County</option>
-                    <option value="project_title">Title of Resarch or Project</option>
-                    <option value="project_url">URL of Paper</option>
-                    <option value="poster_url">URL of Poster</option>
+                    <option value="fname">Last Name</option>
+                    <option value="lname">First Name</option>
+                    <option value="email">Email</option>
+                    <option value="year">Year</option>
+                    <option value="department">Department</option>
+                    <option value="titleOfRes">Title of Research or Project</option>
+                    <option value="description">Description</option>
+                    <option value="state">State</option>  
+                    <option value="county">County</option>
+                    <option value="category">Category</option>
+                    <option value="pubPosInter">Published, Poster, Internal Paper</option>
+                    <option value="url">URL of paper</option>
+                    <option value="citation">Complete citation of paper</option>
+                    <option value="comment">Comments</option>
                     
                 </select>
                 <input type="text" name="search" placeholder="search query">
