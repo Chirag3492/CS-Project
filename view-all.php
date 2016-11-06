@@ -29,6 +29,7 @@ require 'includes/config.php';
         
         <?php } ?>
         <button type="submit" onClick="window.open('register.php','_self')">Register</button>
+		<button type ="print" value= "Print"> </button> 
         
     </div>
     </section>
