@@ -71,7 +71,7 @@ require 'includes/config.php';
                     <option value="comment">Comments</option>
                     
                 </select>
-                <input type="text" name="search"> <button name="search" type="submit">search query</button>
+                <input type="text" name="search"> 
                 <button name="submit" type="submit">submit</button>
             </form>
         </div>
